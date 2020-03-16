@@ -1,9 +1,11 @@
 import React from 'react';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
-import reduxPromise from 'redux-promise';
 
+import async from 'middlewares/async';
 import reducers from 'reducers';
+
+import 'styles/index.css';
 
 export default ({ children, initialState = {} }) => {
 	const composeEnhancers =
@@ -12,7 +14,7 @@ export default ({ children, initialState = {} }) => {
 	const store = createStore(
 		reducers,
 		initialState,
-		composeEnhancers(applyMiddleware(reduxPromise))
+		composeEnhancers(applyMiddleware(async))
 	);
 
 	return <Provider store={store}>{children}</Provider>;

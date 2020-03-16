@@ -1,0 +1,24 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #dddddd;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.header a {
+	text-decoration: none;
+	color: #808080;
+}
+
+.header a:hover {
+	color: cadetblue;
+}
+
+.header button {
+	padding: 5px;
+	outline: none;
+	border-radius: 5px;
+	width: 100px;
+}
